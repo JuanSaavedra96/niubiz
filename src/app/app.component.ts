@@ -74,7 +74,7 @@ export class AppComponent {
       channel:'web',
       merchantid:this.codigo_Comercio,
       purchasenumber:'2020100901',
-      amount:'10.5',
+      amount:'100.00',
       expirationminutes:'20',
       timeouturl:'about:blank',
       merchantlogo:'img/comercio.png',
@@ -87,38 +87,5 @@ export class AppComponent {
     VisanetCheckout.open();
   }
 
-  paginaRespuesta(){
-    //console.log()
-    const options = {
-      method: 'POST',
-      headers: {
-        accept: 'application/json',
-        'content-type': 'application/json',
-        Authorization: this.Token_Seguridad
-      },
-      body: JSON.stringify({
-        "channel": "web",
-        "captureType": "manual",
-        "countable": true,
-        "order" : {
-        "tokenId": "99E9BF92C69A4799A9BF92C69AF79979",
-        "purchaseNumber": "2020100901",
-        "amount": 10.5,
-        "currency": "PEN"
-        }
-      })
-    };
-    
-    this.http.post<any>('https://apisandbox.vnforappstest.com/api.authorization/v3/authorization/ecommerce/'+this.codigo_Comercio,options).subscribe(data=>{
-      console.log(data)
-    })
-
-
-    
-    /* fetch('https://apisandbox.vnforappstest.com/api.authorization/v3/authorization/ecommerce/' + this.codigo_Comercio, options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err)); */
-  }
 }
 

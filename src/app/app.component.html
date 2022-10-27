@@ -7,16 +7,6 @@
 <br><br>
 <input type="text" value="{{token_Session}}">
 
-<!-- <br><br><br>
-<label for="">Monto: </label>
-<input type="text">
-<button>PAY NIUBIZ</button>
- -->
-<!--  -->
-
-<!-- <script type="text/javascript" src="https://static
--content-qas.vnforapps.com/v2/js/checkout.js"></script> -->
-
 
 
 <!-- <form action="paginaRespuesta" method="post">
@@ -34,34 +24,7 @@
     data-merchantlogo="img/comercio.png"
     data-formbuttoncolor="#000000"
   ></script>
-  </form> -->
-
-
-<!-- <script type="text/javascript">
-function openForm() {
-  VisanetCheckout.configure({
-    sessiontoken:this.token_Session,
-    channel:'web',
-    merchantid:this.codigo_Comercio,
-    purchasenumber:'2020100901',
-    amount:'100.5',
-    expirationminutes:'20',
-    timeouturl:'about:blank',
-    merchantlogo:'img/comercio.png',
-    formbuttoncolor:'#000000',
-    action:'paginaRespuesta',
-    complete: function(params) {
-      alert(JSON.stringify(params));
-    }
-  });
-  VisanetCheckout.open();
-}
-</script> -->
-
-<html>
-  <body>
+  </form> --> 
     <div>
       <button (click)="openForm();">Pagar</button>
     </div>
-  </body>
-</html>
